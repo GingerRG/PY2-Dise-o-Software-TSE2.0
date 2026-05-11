@@ -1,0 +1,306 @@
+/* Base - Fondo con tu azul #161b33 */
+.consultas-hub {
+  background: #161b33;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.hub-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Header institucional */
+.header-institucional {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.btn-volver {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 0.85rem;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.btn-volver:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.escudo-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.linea-azul,
+.linea-roja {
+  width: 60px;
+  height: 3px;
+}
+
+.linea-azul {
+  background: #ffffff;
+}
+
+.linea-roja {
+  background: #cc0000;
+}
+
+.escudo-placeholder {
+  width: 60px;
+  height: 60px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-escudo {
+  font-size: 2rem;
+}
+
+.tse-textos {
+  text-align: left;
+}
+
+.tse-textos h2 {
+  color: #ffffff;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  margin: 0;
+  font-weight: 600;
+}
+
+.tse-textos h3 {
+  color: #cc0000;
+  font-size: 0.75rem;
+  margin: 0.25rem 0 0 0;
+  font-weight: normal;
+}
+
+.seccion-consulta {
+  background: #161b33;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: none;
+}
+
+.seccion-header {
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.badge-consulta {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.seccion-header h4 {
+  color: #ffffff;  /* ← BLANCO */
+  font-size: 1.1rem;
+  margin: 0.5rem 0 0 0;
+  font-weight: 600;
+}
+
+.lista-consultas {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.item-consulta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.9rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  color: #e0e0e0;  /* ← TEXTO CLARO */
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: left;
+}
+
+.item-consulta:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-left: 3px solid #cc0000;
+  transform: translateX(2px);
+}
+
+.consulta-texto {
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.consulta-icono {
+  color: #cc0000;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Aviso institucional */
+.aviso-institucional {
+  background: rgba(255, 255, 255, 0.1);
+  border-left: 4px solid #cc0000;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin: 2rem 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.aviso-contenido p {
+  color: #e0e0e0;
+  font-size: 0.85rem;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.5;
+}
+
+.email-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  display: inline-block;
+  margin: 0.5rem 0;
+}
+
+.email-link:hover {
+  text-decoration: underline;
+  color: #cc0000;
+}
+
+.formulario-link {
+  font-size: 0.85rem;
+  margin: 0.5rem 0 0 0;
+  color: #e0e0e0;
+}
+
+.link-institucional {
+  background: none;
+  border: none;
+  color: #cc0000;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+  font-size: 0.85rem;
+}
+
+.link-institucional:hover {
+  color: #ffffff;
+}
+
+/* Bandera de Costa Rica */
+.bandera-cr {
+  display: flex;
+  height: 10px;
+  width: 100%;
+  margin-top: 3rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.franja-azul,
+.franja-azul-2 {
+  flex: 1;
+  background: #00247d;
+}
+
+.franja-blanca-1,
+.franja-blanca-2 {
+  flex: 1;
+  background: #ffffff;
+}
+
+.franja-roja {
+  flex: 2;
+  background: #cc0000;
+}
+
+.header-principal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.logo-container {
+  flex-shrink: 0;
+}
+
+.logo-tse {
+  max-width: clamp(120px, 20vw, 280px);
+  height: auto;
+}
+
+.header-derecha {
+  text-align: right;
+  flex: 1;
+  margin-top: clamp(-60px, -10vh, -10px);
+}
+
+.btn-volver {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: clamp(.9rem, 1.5vw, 1.2rem);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(2px, 0.5vw, 6px);
+  font-weight: 500;
+  opacity: 0.8;
+  margin-bottom: 0;
+  transition: opacity 0.2s;
+}
+
+.btn-volver:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.logo-container {
+  flex-shrink: 0;
+  position: relative;
+}
+
+.aviso-icono {
+  width: 28px;
+  height: 28px;
+  background: #ffffff;
+  color: #161b33;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  font-family: monospace;
+  flex-shrink: 0;
+}

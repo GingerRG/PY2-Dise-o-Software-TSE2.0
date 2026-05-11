@@ -39,3 +39,23 @@ h1 {
   line-height: 1.7;
   color: #4b5563;
 }
+
+.btn-temp {
+  margin-top: 2rem;
+  padding: 0.9rem 1.5rem;
+  background: #25252d;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.btn-temp:hover {
+  background: #353540;
+  border-left: 3px solid #cc0000;
+  transform: translateX(2px);
+}
