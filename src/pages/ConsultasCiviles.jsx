@@ -1,17 +1,19 @@
 import './ConsultasCiviles.css'
 import { useParams } from 'react-router-dom';
+import Header from '../components/Header';
+import CedulaLayout from '../layouts/CedulaLayout';
 
 function ConsultasCiviles() {
 
-    const { tipo } = useParams
+    const { tipo } = useParams;
 
     return(
         <div className="body-consultas">
             <div className="above">
-                <h1>Above</h1>
+                <Header/>
             </div>
             <div className="below">
-                <h1>Below</h1>
+                <CedulaLayout/>
             </div>
         </div>
     );
