@@ -1,6 +1,7 @@
 import { Routes, Route, Link } from 'react-router-dom'
 import './App.css'
 import ConsultasHub from './pages/ConsultasHub'
+import ConsultasCiviles from './pages/ConsultasCiviles'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       } />
       
       <Route path="/consultas" element={<ConsultasHub />} />
+      <Route path="/consulta/:tipo" element={<ConsultasCiviles />} />
     </Routes>
   )
 }

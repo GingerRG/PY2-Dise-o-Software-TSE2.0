@@ -1,0 +1,20 @@
+.body-consultas {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #161b33;
+}
+
+.above {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.below {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
