@@ -54,24 +54,9 @@
 
 .header-simple {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 4rem;
-  margin-bottom: 1.5rem;
-  margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%);
-  width: 100vw;
-  background: rgba(3, 22, 62, 0.95);
-  backdrop-filter: blur(12px);
-  border-bottom: 2px solid #cc0000;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-.header-simple {
-  display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 0.5rem 2rem;
+  padding: clamp(0.3rem, 1vw, 0.6rem) clamp(1rem, 2.5vw, 2rem);
   margin-bottom: 1.5rem;
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
@@ -121,7 +106,7 @@
 .consultas-civiles-titulo {
   font-family: inherit;
   font-weight: 500;
-  font-size: 4.3rem;
+  font-size: clamp(1.4rem, 2.8vw, 3.2rem); /* ~38px en laptop, ~54px en monitor */
   letter-spacing: normal;
   color: #ffffff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -129,7 +114,7 @@
 }
 
 .logo-tse {
-  height: 230px;
+  height: clamp(55px, 8vw, 120px); /* en laptop ~1366px → ~109px, en monitor ~1920px → 120px */
   width: auto;
   display: block;
   object-fit: contain;
@@ -146,14 +131,14 @@
 .hub-container {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 clamp(0.75rem, 3vw, 2rem);  /* era 0 1rem fijo */
 }
 
 .seccion-consulta-doble {
   display: flex;
   gap: 1.5rem;
   margin-bottom: 1.5rem;
-  margin-top: 8rem;
+  margin-top: clamp(1.5rem, 4vw, 5rem); /* en laptop ~55px, en monitor ~96px */
   flex-wrap: wrap;
 }
 
@@ -163,7 +148,7 @@
   background: rgba(22, 27, 51, 0.6);
   backdrop-filter: blur(10px);
   border-radius: 12px;
-  padding: 1.5rem;
+  padding: clamp(1rem, 2vw, 1.5rem);    /* era 1.5rem fijo */
   border: 1px solid rgba(255, 255, 255, 0.25);
   transition: transform 0.2s, background 0.2s;
 }
