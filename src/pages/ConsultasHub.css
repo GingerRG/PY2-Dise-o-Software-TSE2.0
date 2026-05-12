@@ -1,102 +1,176 @@
-/* Base - Fondo con tu azul #161b33 */
 .consultas-hub {
-  background: #161b33;
+  position: relative;
   min-height: 100vh;
-  padding: 2rem;
+  background: #061f4f;
+  overflow-x: hidden;
+}
+
+.consultas-hub::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../assets/Arco_TSE_FW.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  filter: blur(0.5px);
+  opacity: 0.35;
+  z-index: 0;
+}
+
+.consultas-hub::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(3, 22, 62, 0.65),  /* ← Cambiado de 0.75 a 0.85 */
+    rgba(3, 22, 62, 0.7)    /* ← Cambiado de 0.85 a 0.9 */
+  );
+  z-index: 1;
+}
+
+.hub-container,
+.header-simple,
+.seccion-consulta-doble,
+.aviso-institucional,
+.bandera-cr {
+  position: relative;
+  z-index: 5;
 }
 
 .hub-container {
   max-width: 1000px;
   margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
 }
 
-/* Header institucional */
-.header-institucional {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.btn-volver {
-  background: transparent;
-  border: none;
-  color: #ffffff;
-  font-size: 0.85rem;
-  cursor: pointer;
-  margin-bottom: 1.5rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.25rem;
-  font-weight: 500;
-  opacity: 0.8;
-}
-
-.btn-volver:hover {
-  opacity: 1;
-  text-decoration: underline;
-}
-
-.escudo-section {
+.header-simple {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
+  padding: 1rem 4rem;
+  margin-bottom: 1.5rem;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  width: 100vw;
+  background: rgba(3, 22, 62, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 2px solid #cc0000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.header-simple {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  margin-bottom: 1.5rem;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  width: 100vw;
+  background: rgba(3, 22, 62, 0.50);
+  backdrop-filter: blur(7px);
+  border-bottom: 2px solid #cc0000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  position: relative;
+}
+
+.header-simple::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #ff0000,
+    #ff6666,
+    #ff0000,
+    transparent
+  );
+  box-shadow: 0 0 10px #ff0000, 0 0 20px #ff4444;
+  border-radius: 2px;
+}
+
+.logo-container {
+  flex: 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.header-titulo {
+  flex: 0;
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+  margin-left: 0.5rem;
+}
+
+
+.consultas-civiles-titulo {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 4.3rem;
+  letter-spacing: normal;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 0;
+}
+
+.logo-tse {
+  height: 230px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.logo-tse:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.hub-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.seccion-consulta-doble {
+  display: flex;
   gap: 1.5rem;
   margin-bottom: 1.5rem;
+  margin-top: 8rem;
+  flex-wrap: wrap;
 }
 
-.linea-azul,
-.linea-roja {
-  width: 60px;
-  height: 3px;
-}
-
-.linea-azul {
-  background: #ffffff;
-}
-
-.linea-roja {
-  background: #cc0000;
-}
-
-.escudo-placeholder {
-  width: 60px;
-  height: 60px;
-  background: #ffffff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.icon-escudo {
-  font-size: 2rem;
-}
-
-.tse-textos {
-  text-align: left;
-}
-
-.tse-textos h2 {
-  color: #ffffff;
-  font-size: 0.9rem;
-  letter-spacing: 1px;
-  margin: 0;
-  font-weight: 600;
-}
-
-.tse-textos h3 {
-  color: #cc0000;
-  font-size: 0.75rem;
-  margin: 0.25rem 0 0 0;
-  font-weight: normal;
-}
-
-.seccion-consulta {
-  background: #161b33;
+.seccion-consulta.mitad {
+  flex: 1;
+  min-width: 250px;
+  background: rgba(22, 27, 51, 0.6);
+  backdrop-filter: blur(10px);
   border-radius: 12px;
-  margin-bottom: 1.5rem;
   padding: 1.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: none;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: transform 0.2s, background 0.2s;
+}
+
+.seccion-consulta.mitad:hover {
+  background: rgba(22, 27, 51, 0.85);
+  transform: translateY(-2px);
 }
 
 .seccion-header {
@@ -117,7 +191,7 @@
 }
 
 .seccion-header h4 {
-  color: #ffffff;  /* ← BLANCO */
+  color: #ffffff;
   font-size: 1.1rem;
   margin: 0.5rem 0 0 0;
   font-weight: 600;
@@ -135,10 +209,10 @@
   align-items: center;
   width: 100%;
   padding: 0.9rem 1rem;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
-  color: #e0e0e0;  /* ← TEXTO CLARO */
+  color: #e0e0e0;
   font-size: 0.95rem;
   cursor: pointer;
   transition: all 0.2s;
@@ -146,7 +220,7 @@
 }
 
 .item-consulta:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.5);
   border-left: 3px solid #cc0000;
   transform: translateX(2px);
 }
@@ -158,19 +232,42 @@
 
 .consulta-icono {
   color: #cc0000;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: bold;
+  transition: transform 0.2s;
 }
 
-/* Aviso institucional */
+.item-consulta:hover .consulta-icono {
+  transform: translateX(3px);
+}
+
 .aviso-institucional {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(22, 27, 51, 0.6);
+  backdrop-filter: blur(10px);
   border-left: 4px solid #cc0000;
   border-radius: 8px;
   padding: 1.25rem;
   margin: 2rem 0;
   display: flex;
   gap: 1rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.aviso-icono {
+  width: 28px;
+  height: 28px;
+  background: #ffffff;
+  color: #161b33;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  font-family: monospace;
+  flex-shrink: 0;
 }
 
 .aviso-contenido p {
@@ -243,64 +340,10 @@
   background: #cc0000;
 }
 
-.header-principal {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-
-.logo-container {
-  flex-shrink: 0;
-}
-
-.logo-tse {
-  max-width: clamp(120px, 20vw, 280px);
-  height: auto;
-}
-
-.header-derecha {
-  text-align: right;
-  flex: 1;
-  margin-top: clamp(-60px, -10vh, -10px);
-}
-
-.btn-volver {
-  background: transparent;
-  border: none;
-  color: #ffffff;
-  font-size: clamp(.9rem, 1.5vw, 1.2rem);
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: clamp(2px, 0.5vw, 6px);
-  font-weight: 500;
-  opacity: 0.8;
-  margin-bottom: 0;
-  transition: opacity 0.2s;
-}
-
-.btn-volver:hover {
-  opacity: 1;
-  text-decoration: underline;
-}
-
-.logo-container {
-  flex-shrink: 0;
-  position: relative;
-}
-
-.aviso-icono {
-  width: 28px;
-  height: 28px;
-  background: #ffffff;
-  color: #161b33;
-  border-radius: 50%;
+.escudo-section {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: bold;
-  font-size: 1.2rem;
-  font-family: monospace;
-  flex-shrink: 0;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
 }
