@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './NombreLayout.css'
 
-function NombreLayout() {
+function NombreLayout({ tipo }) {
   const [nombre, setNombre] = useState('')
   const [apellido1, setApellido1] = useState('')
   const [apellido2, setApellido2] = useState('')

@@ -50,3 +50,39 @@
     align-items: center;
     flex-direction: column;
 }
+
+.nav-strip {
+  display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem 2rem;
+    background: transparent;
+    position: relative;
+    z-index: 10;
+}
+
+.nav-strip-btn {
+  padding: 0.4rem 1.25rem;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 0.82rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+    z-index: 10;
+    pointer-events: all;
+}
+
+.nav-strip-btn:hover {
+    border-color: rgba(255, 255, 255, 0.35);
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-strip-btn.active {
+    background: #cc0000;
+    border-color: #cc0000;
+    color: #ffffff;
+}

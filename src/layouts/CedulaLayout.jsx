@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import Header from '../components/Header'
 import './CedulaLayout.css'
 
-function CedulaLayout() {
+function CedulaLayout({ tipo }) {
   const [cedula, setCedula] = useState('')
   const navigate = useNavigate()
 
