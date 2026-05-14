@@ -136,6 +136,7 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s;
+  margin-bottom: 3rem;
 }
 
 .nombre-btn-primario:hover:not(:disabled) {

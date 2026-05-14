@@ -4,6 +4,7 @@ import ConsultasHub from './pages/ConsultasHub'
 import ConsultasCiviles from './pages/ConsultasCiviles'
 import Home from './pages/Home'
 import NombresResults from './pages/NombresResults'
+import Persona from './pages/Persona'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Route path="/consultas" element={<ConsultasHub />} />
       <Route path="/consulta/:tipo" element={<ConsultasCiviles />} />
       <Route path="/nombresResults" element={<NombresResults/>} />
+      <Route path="/persona" element={<Persona/>} />
     </Routes>
   )
 }
