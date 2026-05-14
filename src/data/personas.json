@@ -1,0 +1,358 @@
+{
+  "personas": [
+    {
+      "cedula": "101010101",
+      "nombreCompleto": "Juan Carlos Pérez Rodríguez",
+      "conocidoComo": "Juanca",
+      "padres": {
+        "padreOMadre1": {
+          "nombreCompleto": "María Rodríguez López",
+          "identificacion": "201010101"
+        },
+        "padreOMadre2": {
+          "nombreCompleto": "Carlos Pérez Jiménez",
+          "identificacion": "301010101"
+        }
+      },
+      "fechaNacimiento": "1995-03-14",
+      "nacionalidad": "Costarricense",
+      "edad": 31,
+      "marginal": false,
+      "lugarNacimiento": {
+        "provincia": "San José",
+        "canton": "Desamparados",
+        "distrito": "San Miguel"
+      },
+      "empadronado": true,
+      "fallecido": false,
+      "hijosRegistrados": [],
+      "matrimoniosRegistrados": [],
+      "lugarVotacion": {
+        "provincia": "San José",
+        "canton": "Desamparados",
+        "distrito": "San Miguel",
+        "distritoElectoral": "San Miguel Centro",
+        "numeroElectoral": null,
+        "centroVotacion": null,
+        "numeroJunta": null,
+        "fechaVencimientoCedula": "2031-01-01",
+        "inscritoEnCantonDesde": "2013-04-10",
+        "inscritoEnDistritoDesde": "2018-06-01"
+      }
+    },
+    {
+      "cedula": "101010102",
+      "nombreCompleto": "María Fernanda Pérez Rodríguez",
+      "conocidoComo": "Mafe",
+      "padres": {
+        "padreOMadre1": {
+          "nombreCompleto": "Laura Rodríguez López",
+          "identificacion": "201010102"
+        },
+        "padreOMadre2": {
+          "nombreCompleto": "José Pérez Jiménez",
+          "identificacion": "301010102"
+        }
+      },
+      "fechaNacimiento": "1998-07-21",
+      "nacionalidad": "Costarricense",
+      "edad": 28,
+      "marginal": false,
+      "lugarNacimiento": {
+        "provincia": "Cartago",
+        "canton": "Cartago",
+        "distrito": "Oriental"
+      },
+      "empadronado": true,
+      "fallecido": false,
+      "hijosRegistrados": [],
+      "matrimoniosRegistrados": [],
+      "lugarVotacion": {
+        "provincia": "Cartago",
+        "canton": "Cartago",
+        "distrito": "Oriental",
+        "distritoElectoral": "Oriental Norte",
+        "numeroElectoral": null,
+        "centroVotacion": null,
+        "numeroJunta": null,
+        "fechaVencimientoCedula": "2030-05-12",
+        "inscritoEnCantonDesde": "2016-01-15",
+        "inscritoEnDistritoDesde": "2019-08-11"
+      }
+    },
+    {
+      "cedula": "101010103",
+      "nombreCompleto": "Luis Alberto Rodríguez Mora",
+      "conocidoComo": null,
+      "padres": {
+        "padreOMadre1": {
+          "nombreCompleto": "Carmen Mora Vargas",
+          "identificacion": "201010103"
+        },
+        "padreOMadre2": {
+          "nombreCompleto": "Andrés Rodríguez Solano",
+          "identificacion": "301010103"
+        }
+      },
+      "fechaNacimiento": "1987-12-10",
+      "nacionalidad": "Costarricense",
+      "edad": 38,
+      "marginal": true,
+      "lugarNacimiento": {
+        "provincia": "Heredia",
+        "canton": "Heredia",
+        "distrito": "Mercedes"
+      },
+      "empadronado": true,
+      "fallecido": false,
+      "hijosRegistrados": [
+        {
+          "cedula": "121010103",
+          "nombreCompleto": "Daniel Rodríguez Pérez"
+        }
+      ],
+      "matrimoniosRegistrados": [
+        {
+          "cedula": "221010103",
+          "nombreCompleto": "Andrea Pérez Vargas"
+        }
+      ],
+      "lugarVotacion": {
+        "provincia": "Heredia",
+        "canton": "Heredia",
+        "distrito": "Mercedes",
+        "distritoElectoral": "Mercedes Sur",
+        "numeroElectoral": null,
+        "centroVotacion": null,
+        "numeroJunta": null,
+        "fechaVencimientoCedula": "2029-09-20",
+        "inscritoEnCantonDesde": "2007-02-01",
+        "inscritoEnDistritoDesde": "2010-10-05"
+      }
+    },
+    {
+      "cedula": "101010104",
+      "nombreCompleto": "Andrea Rodríguez Mora",
+      "conocidoComo": "Andy",
+      "padres": {
+        "padreOMadre1": {
+          "nombreCompleto": "Carmen Mora Vargas",
+          "identificacion": "201010104"
+        },
+        "padreOMadre2": {
+          "nombreCompleto": "Andrés Rodríguez Solano",
+          "identificacion": "301010104"
+        }
+      },
+      "fechaNacimiento": "1992-11-02",
+      "nacionalidad": "Costarricense",
+      "edad": 33,
+      "marginal": false,
+      "lugarNacimiento": {
+        "provincia": "Alajuela",
+        "canton": "San Ramón",
+        "distrito": "Central"
+      },
+      "empadronado": true,
+      "fallecido": false,
+      "hijosRegistrados": [],
+      "matrimoniosRegistrados": [],
+      "lugarVotacion": {
+        "provincia": "Alajuela",
+        "canton": "San Ramón",
+        "distrito": "Central",
+        "distritoElectoral": "Central Norte",
+        "numeroElectoral": null,
+        "centroVotacion": null,
+        "numeroJunta": null,
+        "fechaVencimientoCedula": "2032-04-04",
+        "inscritoEnCantonDesde": "2012-06-06",
+        "inscritoEnDistritoDesde": "2014-09-01"
+      }
+    },
+    {
+      "cedula": "101010105",
+      "nombreCompleto": "Carlos Andrés Mora Pérez",
+      "conocidoComo": null,
+      "padres": {
+        "padreOMadre1": {
+          "nombreCompleto": "Lucía Pérez Castro",
+          "identificacion": "201010105"
+        },
+        "padreOMadre2": {
+          "nombreCompleto": "Mario Mora Chaves",
+          "identificacion": "301010105"
+        }
+      },
+      "fechaNacimiento": "2000-01-19",
+      "nacionalidad": "Costarricense",
+      "edad": 26,
+      "marginal": false,
+      "lugarNacimiento": {
+        "provincia": "Puntarenas",
+        "canton": "Puntarenas",
+        "distrito": "Barranca"
+      },
+      "empadronado": true,
+      "fallecido": false,
+      "hijosRegistrados": [],
+      "matrimoniosRegistrados": [],
+      "lugarVotacion": {
+        "provincia": "Puntarenas",
+        "canton": "Puntarenas",
+        "distrito": "Barranca",
+        "distritoElectoral": "Barranca Este",
+        "numeroElectoral": null,
+        "centroVotacion": null,
+        "numeroJunta": null,
+        "fechaVencimientoCedula": "2033-07-07",
+        "inscritoEnCantonDesde": "2018-03-03",
+        "inscritoEnDistritoDesde": "2020-01-01"
+      }
+    },
+    {
+      "cedula": "101010106",
+      "nombreCompleto": "Ana Lucía Pérez Castro",
+      "conocidoComo": "Anita",
+      "padres": {
+        "padreOMadre1": {
+          "nombreCompleto": "Patricia Castro Ruiz",
+          "identificacion": "201010106"
+        },
+        "padreOMadre2": {
+          "nombreCompleto": "Ricardo Pérez León",
+          "identificacion": "301010106"
+        }
+      },
+      "fechaNacimiento": "1999-09-09",
+      "nacionalidad": "Costarricense",
+      "edad": 27,
+      "marginal": false,
+      "lugarNacimiento": {
+        "provincia": "Limón",
+        "canton": "Pococí",
+        "distrito": "Guápiles"
+      },
+      "empadronado": true,
+      "fallecido": false,
+      "hijosRegistrados": [],
+      "matrimoniosRegistrados": [],
+      "lugarVotacion": {
+        "provincia": "Limón",
+        "canton": "Pococí",
+        "distrito": "Guápiles",
+        "distritoElectoral": "Guápiles Centro",
+        "numeroElectoral": null,
+        "centroVotacion": null,
+        "numeroJunta": null,
+        "fechaVencimientoCedula": "2031-12-12",
+        "inscritoEnCantonDesde": "2017-05-01",
+        "inscritoEnDistritoDesde": "2021-02-14"
+      }
+    },
+
+    {
+      "cedula": "101010107",
+      "nombreCompleto": "José Manuel Castro Pérez",
+      "conocidoComo": "Chema",
+      "padres": {
+        "padreOMadre1": {
+          "nombreCompleto": "Elena Pérez Mora",
+          "identificacion": "201010107"
+        },
+        "padreOMadre2": {
+          "nombreCompleto": "Óscar Castro Solano",
+          "identificacion": "301010107"
+        }
+      },
+      "fechaNacimiento": "1985-08-17",
+      "nacionalidad": "Costarricense",
+      "edad": 41,
+      "marginal": false,
+      "lugarNacimiento": {
+        "provincia": "San José",
+        "canton": "Curridabat",
+        "distrito": "Granadilla"
+      },
+      "empadronado": true,
+      "fallecido": false,
+      "hijosRegistrados": [
+        {
+          "cedula": "131010107",
+          "nombreCompleto": "Mateo Castro Pérez"
+        }
+      ],
+      "matrimoniosRegistrados": [
+        {
+          "cedula": "231010107",
+          "nombreCompleto": "Gabriela Rodríguez Mora"
+        }
+      ],
+      "lugarVotacion": {
+        "provincia": "San José",
+        "canton": "Curridabat",
+        "distrito": "Granadilla",
+        "distritoElectoral": "Granadilla Norte",
+        "numeroElectoral": null,
+        "centroVotacion": null,
+        "numeroJunta": null,
+        "fechaVencimientoCedula": "2028-03-15",
+        "inscritoEnCantonDesde": "2005-05-12",
+        "inscritoEnDistritoDesde": "2011-07-01"
+      }
+    },
+
+    {
+      "cedula": "101010108",
+      "nombreCompleto": "Gabriela Rodríguez Mora",
+      "conocidoComo": "Gaby",
+      "padres": {
+        "padreOMadre1": {
+          "nombreCompleto": "Rosa Mora Jiménez",
+          "identificacion": "201010108"
+        },
+        "padreOMadre2": {
+          "nombreCompleto": "Pedro Rodríguez Vargas",
+          "identificacion": "301010108"
+        }
+      },
+      "fechaNacimiento": "1988-05-04",
+      "nacionalidad": "Costarricense",
+      "edad": 38,
+      "marginal": false,
+      "lugarNacimiento": {
+        "provincia": "Heredia",
+        "canton": "Belén",
+        "distrito": "San Antonio"
+      },
+      "empadronado": true,
+      "fallecido": false,
+      "hijosRegistrados": [
+        {
+          "cedula": "131010108",
+          "nombreCompleto": "Mateo Castro Pérez"
+        }
+      ],
+      "matrimoniosRegistrados": [
+        {
+          "cedula": "101010107",
+          "nombreCompleto": "José Manuel Castro Pérez"
+        }
+      ],
+      "lugarVotacion": {
+        "provincia": "Heredia",
+        "canton": "Belén",
+        "distrito": "San Antonio",
+        "distritoElectoral": "San Antonio Centro",
+        "numeroElectoral": null,
+        "centroVotacion": null,
+        "numeroJunta": null,
+        "fechaVencimientoCedula": "2032-10-20",
+        "inscritoEnCantonDesde": "2008-09-11",
+        "inscritoEnDistritoDesde": "2015-02-02"
+      }
+    }
+
+    
+  ]
+}

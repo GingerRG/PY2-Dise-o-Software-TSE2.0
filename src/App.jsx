@@ -3,6 +3,7 @@ import './App.css'
 import ConsultasHub from './pages/ConsultasHub'
 import ConsultasCiviles from './pages/ConsultasCiviles'
 import Home from './pages/Home'
+import NombresResults from './pages/NombresResults'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
 
       <Route path="/consultas" element={<ConsultasHub />} />
       <Route path="/consulta/:tipo" element={<ConsultasCiviles />} />
+      <Route path="/nombresResults" element={<NombresResults/>} />
     </Routes>
   )
 }

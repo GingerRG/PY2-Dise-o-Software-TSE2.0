@@ -30,7 +30,8 @@ function CedulaLayout({ tipo }) {
             </div>
 
             <div className="cedula-actions">
-              <button className="cedula-btn-primario" disabled={!cedula}>
+              <button className="cedula-btn-primario" 
+                disabled={cedula.length < 9 || cedula.length > 12}>
                 Consultar →
               </button>
             </div>

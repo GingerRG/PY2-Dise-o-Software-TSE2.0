@@ -60,9 +60,11 @@ function NombreLayout({ tipo }) {
 
             <div className="nombre-actions">
               <button
-                className="nombre-btn-primario"
+                className="nombre-btn-primario" 
                 disabled={!nombre || !apellido1}
+                onClick={() => navigate("/nombresResults")}
               >
+                
                 Consultar →
               </button>
             </div>
