@@ -3,10 +3,11 @@
   justify-content: flex-start;
   align-items: center;
   padding: clamp(0.3rem, 1vw, 0.6rem) clamp(1rem, 2.5vw, 2rem);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
   width: 100vw;
+  height: 14vh;
   background: rgba(3, 22, 62, 0.50);
   backdrop-filter: blur(7px);
   border-bottom: 2px solid #cc0000;
@@ -67,7 +68,7 @@
 .consultas-civiles-titulo {
   font-family: inherit;
   font-weight: 500;
-  font-size: clamp(1.4rem, 2.8vw, 3.2rem);
+  font-size: clamp(1.4rem, 2vw, 3.2rem);
   letter-spacing: normal;
   color: #ffffff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
