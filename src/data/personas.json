@@ -351,6 +351,88 @@
         "inscritoEnCantonDesde": "2008-09-11",
         "inscritoEnDistritoDesde": "2015-02-02"
       }
+    },
+
+    {
+      "cedula": "E-77123455",
+      "nombreCompleto": "Sofía Ramírez López",
+      "conocidoComo": null,
+      "padres": {
+        "padreOMadre1": {
+          "nombreCompleto": "Patricia López Méndez",
+          "identificacion": null
+        },
+        "padreOMadre2": {
+          "nombreCompleto": "Miguel Ramírez Torres",
+          "identificacion": null
+        }
+      },
+      "fechaNacimiento": "1984-10-11",
+      "nacionalidad": "Nicaragüense",
+      "edad": 42,
+      "marginal": false,
+      "lugarNacimiento": {
+        "pais": "Nicaragua",
+        "provincia": null,
+        "canton": null,
+        "distrito": "Managua"
+      },
+      "empadronado": false,
+      "fallecido": false,
+      "hijosRegistrados": [
+        {
+          "cedula": "141010301",
+          "nombreCompleto": "Valeria Ramírez Pérez"
+        }
+      ],
+      "matrimoniosRegistrados": [
+        {
+          "cedula": "241010301",
+          "nombreCompleto": "Esteban Pérez Mora"
+        }
+      ],
+      "condicionMigratoria": {
+        "tipo": "Residencia permanente",
+        "numeroDIMEX": "178990221",
+        "vence": "2030-01-30"
+      },
+      "lugarVotacion": null
+    },
+
+    {
+      "cedula": "E-90817263",
+      "nombreCompleto": "Alejandro Martínez Gómez",
+      "conocidoComo": "Alex",
+      "padres": {
+        "padreOMadre1": {
+          "nombreCompleto": "Verónica Gómez Herrera",
+          "identificacion": null
+        },
+        "padreOMadre2": {
+          "nombreCompleto": "Fernando Martínez Rojas",
+          "identificacion": null
+        }
+      },
+      "fechaNacimiento": "1991-04-22",
+      "nacionalidad": "Colombiana",
+      "edad": 35,
+      "marginal": false,
+      "lugarNacimiento": {
+        "pais": "Colombia",
+        "provincia": null,
+        "canton": null,
+        "distrito": "Medellín"
+      },
+      "empadronado": false,
+      "fallecido": true,
+      "hijosRegistrados": [],
+      "matrimoniosRegistrados": [],
+      "condicionMigratoria": {
+        "tipo": "Residencia temporal",
+        "numeroDIMEX": "155667890",
+        "vence": "2027-08-15"
+      },
+      "lugarVotacion": null
     }
 
     

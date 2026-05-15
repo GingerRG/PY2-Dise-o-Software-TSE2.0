@@ -242,3 +242,9 @@
     text-align: center;
     margin: 0;
 }
+
+.badge-estado.extranjero {
+    background: rgba(100, 160, 255, 0.2);
+    color: #a0c4ff;
+    border: 1px solid rgba(100, 160, 255, 0.3);
+}

@@ -14,7 +14,7 @@ function App() {
       <Route path="/consultas" element={<ConsultasHub />} />
       <Route path="/consulta/:tipo" element={<ConsultasCiviles />} />
       <Route path="/nombresResults" element={<NombresResults/>} />
-      <Route path="/persona" element={<Persona/>} />
+      <Route path="/persona/:tipo" element={<Persona/>} />
     </Routes>
   )
 }

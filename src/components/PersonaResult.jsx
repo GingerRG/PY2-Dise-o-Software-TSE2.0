@@ -1,40 +1,8 @@
 import { useState } from 'react';
 import './PersonaResult.css';
 
-const MOCK_PERSONA = {
-    cedula: "101010101",
-    nombreCompleto: "Juan Carlos Pérez Rodríguez",
-    conocidoComo: "Juanca",
-    padres: {
-        padreOMadre1: { nombreCompleto: "María Rodríguez López", identificacion: "201010101" },
-        padreOMadre2: { nombreCompleto: "Carlos Pérez Jiménez", identificacion: "301010101" }
-    },
-    fechaNacimiento: "1995-03-14",
-    nacionalidad: "Costarricense",
-    edad: 31,
-    marginal: false,
-    lugarNacimiento: { provincia: "San José", canton: "Desamparados", distrito: "San Miguel" },
-    empadronado: true,
-    fallecido: false,
-    hijosRegistrados: [],
-    matrimoniosRegistrados: [],
-    lugarVotacion: {
-        provincia: "San José",
-        canton: "Desamparados",
-        distrito: "San Miguel",
-        distritoElectoral: "San Miguel Centro",
-        numeroElectoral: null,
-        centroVotacion: null,
-        numeroJunta: null,
-        fechaVencimientoCedula: "2031-01-01",
-        inscritoEnCantonDesde: "2013-04-10",
-        inscritoEnDistritoDesde: "2018-06-01"
-    }
-};
-
 function SeccionDesplegable({ titulo, children, defaultOpen = false }) {
     const [abierto, setAbierto] = useState(defaultOpen);
-
     return (
         <div className={`seccion-desplegable ${abierto ? 'abierto' : ''}`}>
             <button className="desplegable-header" onClick={() => setAbierto(!abierto)}>
@@ -70,7 +38,9 @@ function FilaDato({ label, valor }) {
     );
 }
 
-function PersonaResult({ persona = MOCK_PERSONA }) {
+function PersonaResult({ persona }) {
+
+    const esExtranjero = persona.nacionalidad !== 'Costarricense';
 
     const formatearFecha = (fecha) => {
         if (!fecha) return '—';
@@ -81,26 +51,24 @@ function PersonaResult({ persona = MOCK_PERSONA }) {
     return (
         <div className="persona-result-wrapper">
 
-            {/* Encabezado */}
             <div className="persona-result-header">
-                
                 <div className="persona-header-info">
                     <h2 className="persona-nombre">{persona.nombreCompleto}</h2>
                     {persona.conocidoComo && (
                         <p className="persona-alias">Conocido como: {persona.conocidoComo}</p>
                     )}
                     <div className="persona-badges">
-                        {persona.fallecido  && <span className="badge-estado fallecido">Fallecido</span>}
-                        {persona.marginal   && <span className="badge-estado marginal">Marginal</span>}
+                        {persona.fallecido   && <span className="badge-estado fallecido">Fallecido</span>}
+                        {persona.marginal    && <span className="badge-estado marginal">Marginal</span>}
                         {persona.empadronado && <span className="badge-estado empadronado">Empadronado</span>}
+                        {esExtranjero        && <span className="badge-estado extranjero">Persona extranjera</span>}
                     </div>
                 </div>
             </div>
 
-            {/* Cuerpo con scroll */}
             <div className="persona-result-body">
 
-                {/* Grid 2 columnas — información personal */}
+                {/* Información personal */}
                 <div className="info-grid">
                     <CeldaDato label="Cédula"              valor={persona.cedula} />
                     <CeldaDato label="Nacionalidad"        valor={persona.nacionalidad} />
@@ -108,9 +76,20 @@ function PersonaResult({ persona = MOCK_PERSONA }) {
                     <CeldaDato label="Edad"                valor={`${persona.edad} años`} />
                 </div>
 
-                <div className="info-seccion-titulo">Filiación</div>
+                {/* Condición migratoria — solo extranjeros */}
+                {esExtranjero && persona.condicionMigratoria && (
+                    <>
+                        <div className="info-seccion-titulo">Condición migratoria</div>
+                        <div className="info-grid">
+                            <CeldaDato label="Tipo"         valor={persona.condicionMigratoria.tipo} />
+                            <CeldaDato label="Vence"        valor={formatearFecha(persona.condicionMigratoria.vence)} />
+                            <CeldaDato label="N° DIMEX"     valor={persona.condicionMigratoria.numeroDIMEX} />
+                            <CeldaDato label=" " valor={null} />
+                        </div>
+                    </>
+                )}
 
-                {/* Grid 2 columnas — padres */}
+                <div className="info-seccion-titulo">Filiación</div>
                 <div className="info-grid">
                     <CeldaDato label="Padre / Madre 1" valor={persona.padres.padreOMadre1?.nombreCompleto} />
                     <CeldaDato label="Cédula"          valor={persona.padres.padreOMadre1?.identificacion} />
@@ -118,27 +97,39 @@ function PersonaResult({ persona = MOCK_PERSONA }) {
                     <CeldaDato label="Cédula"          valor={persona.padres.padreOMadre2?.identificacion} />
                 </div>
 
-                {/* Desplegables */}
                 <div className="desplegables-grid">
 
+                    {/* Lugar de nacimiento — adapta según nacional/extranjero */}
                     <SeccionDesplegable titulo="Lugar de nacimiento">
-                        <FilaDato label="Provincia" valor={persona.lugarNacimiento.provincia} />
-                        <FilaDato label="Cantón"    valor={persona.lugarNacimiento.canton} />
-                        <FilaDato label="Distrito"  valor={persona.lugarNacimiento.distrito} />
+                        {esExtranjero ? (
+                            <>
+                                <FilaDato label="País"      valor={persona.lugarNacimiento.pais} />
+                                <FilaDato label="Distrito"  valor={persona.lugarNacimiento.distrito} />
+                            </>
+                        ) : (
+                            <>
+                                <FilaDato label="Provincia" valor={persona.lugarNacimiento.provincia} />
+                                <FilaDato label="Cantón"    valor={persona.lugarNacimiento.canton} />
+                                <FilaDato label="Distrito"  valor={persona.lugarNacimiento.distrito} />
+                            </>
+                        )}
                     </SeccionDesplegable>
 
-                    <SeccionDesplegable titulo="Lugar de votación">
-                        <FilaDato label="Provincia"                   valor={persona.lugarVotacion.provincia} />
-                        <FilaDato label="Cantón"                      valor={persona.lugarVotacion.canton} />
-                        <FilaDato label="Distrito"                    valor={persona.lugarVotacion.distrito} />
-                        <FilaDato label="Distrito electoral"          valor={persona.lugarVotacion.distritoElectoral} />
-                        <FilaDato label="N° electoral"                valor={persona.lugarVotacion.numeroElectoral} />
-                        <FilaDato label="Centro de votación"          valor={persona.lugarVotacion.centroVotacion} />
-                        <FilaDato label="N° de junta"                 valor={persona.lugarVotacion.numeroJunta} />
-                        <FilaDato label="Vencimiento cédula"          valor={formatearFecha(persona.lugarVotacion.fechaVencimientoCedula)} />
-                        <FilaDato label="Inscrito en cantón desde"    valor={formatearFecha(persona.lugarVotacion.inscritoEnCantonDesde)} />
-                        <FilaDato label="Inscrito en distrito desde"  valor={formatearFecha(persona.lugarVotacion.inscritoEnDistritoDesde)} />
-                    </SeccionDesplegable>
+                    {/* Lugar de votación — solo nacionales */}
+                    {!esExtranjero && persona.lugarVotacion && (
+                        <SeccionDesplegable titulo="Lugar de votación">
+                            <FilaDato label="Provincia"                  valor={persona.lugarVotacion.provincia} />
+                            <FilaDato label="Cantón"                     valor={persona.lugarVotacion.canton} />
+                            <FilaDato label="Distrito"                   valor={persona.lugarVotacion.distrito} />
+                            <FilaDato label="Distrito electoral"         valor={persona.lugarVotacion.distritoElectoral} />
+                            <FilaDato label="N° electoral"               valor={persona.lugarVotacion.numeroElectoral} />
+                            <FilaDato label="Centro de votación"         valor={persona.lugarVotacion.centroVotacion} />
+                            <FilaDato label="N° de junta"                valor={persona.lugarVotacion.numeroJunta} />
+                            <FilaDato label="Vencimiento cédula"         valor={formatearFecha(persona.lugarVotacion.fechaVencimientoCedula)} />
+                            <FilaDato label="Inscrito en cantón desde"   valor={formatearFecha(persona.lugarVotacion.inscritoEnCantonDesde)} />
+                            <FilaDato label="Inscrito en distrito desde" valor={formatearFecha(persona.lugarVotacion.inscritoEnDistritoDesde)} />
+                        </SeccionDesplegable>
+                    )}
 
                     <SeccionDesplegable titulo={`Matrimonios registrados (${persona.matrimoniosRegistrados.length})`}>
                         {persona.matrimoniosRegistrados.length === 0 ? (
@@ -147,7 +138,7 @@ function PersonaResult({ persona = MOCK_PERSONA }) {
                             persona.matrimoniosRegistrados.map((m, i) => (
                                 <div key={i} className="sub-item">
                                     <FilaDato label="Cónyuge" valor={m.nombreCompleto} />
-                                    <FilaDato label="Fecha"   valor={formatearFecha(m.fecha)} />
+                                    <FilaDato label="Cédula"  valor={m.cedula} />
                                 </div>
                             ))
                         )}
@@ -160,7 +151,7 @@ function PersonaResult({ persona = MOCK_PERSONA }) {
                             persona.hijosRegistrados.map((h, i) => (
                                 <div key={i} className="sub-item">
                                     <FilaDato label="Nombre" valor={h.nombreCompleto} />
-                                    <FilaDato label="Cédula" valor={h.identificacion} />
+                                    <FilaDato label="Cédula" valor={h.cedula} />
                                 </div>
                             ))
                         )}
