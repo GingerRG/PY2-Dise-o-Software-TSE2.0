@@ -11,7 +11,8 @@ function ConsultasCiviles() {
     const navigate = useNavigate();
 
     // La estrategia es independiente del tipo de consulta
-    const [estrategia, setEstrategia] = useState('cedula');
+    const estrategiaInicial = tipo === 'cedula' ? 'cedula' : 'nombre';
+    const [estrategia, setEstrategia] = useState(estrategiaInicial);
 
     const renderLayout = () => {
         return estrategia === 'cedula'

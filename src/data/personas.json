@@ -433,8 +433,402 @@
         "vence": "2027-08-15"
       },
       "lugarVotacion": null
-    }
+    },
 
-    
+    {
+      "cedula": "101010109",
+      "nombreCompleto": "Juan Andrés Pérez Rodríguez",
+      "conocidoComo": "Juancho",
+      "padres": {
+        "padreOMadre1": {
+          "nombreCompleto": "María Rodríguez López",
+          "identificacion": "201010109"
+        },
+        "padreOMadre2": {
+          "nombreCompleto": "Carlos Pérez Jiménez",
+          "identificacion": "301010109"
+        }
+      },
+      "fechaNacimiento": "1994-06-11",
+      "nacionalidad": "Costarricense",
+      "edad": 32,
+      "marginal": false,
+      "lugarNacimiento": {
+        "provincia": "San José",
+        "canton": "Desamparados",
+        "distrito": "San Miguel"
+      },
+      "empadronado": true,
+      "fallecido": false,
+      "hijosRegistrados": [],
+      "matrimoniosRegistrados": [],
+      "lugarVotacion": {
+        "provincia": "San José",
+        "canton": "Desamparados",
+        "distrito": "San Miguel",
+        "distritoElectoral": "San Miguel Norte",
+        "numeroElectoral": null,
+        "centroVotacion": null,
+        "numeroJunta": null,
+        "fechaVencimientoCedula": "2032-01-10",
+        "inscritoEnCantonDesde": "2012-04-12",
+        "inscritoEnDistritoDesde": "2017-02-01"
+      }
+    },
+    {
+      "cedula": "101010110",
+      "nombreCompleto": "Juan David Pérez Rodríguez",
+      "conocidoComo": null,
+      "padres": {
+        "padreOMadre1": {
+          "nombreCompleto": "Laura Rodríguez López",
+          "identificacion": "201010110"
+        },
+        "padreOMadre2": {
+          "nombreCompleto": "José Pérez Jiménez",
+          "identificacion": "301010110"
+        }
+      },
+      "fechaNacimiento": "1997-02-18",
+      "nacionalidad": "Costarricense",
+      "edad": 29,
+      "marginal": false,
+      "lugarNacimiento": {
+        "provincia": "Cartago",
+        "canton": "Cartago",
+        "distrito": "Oriental"
+      },
+      "empadronado": true,
+      "fallecido": false,
+      "hijosRegistrados": [],
+      "matrimoniosRegistrados": [],
+      "lugarVotacion": {
+        "provincia": "Cartago",
+        "canton": "Cartago",
+        "distrito": "Oriental",
+        "distritoElectoral": "Oriental Sur",
+        "numeroElectoral": null,
+        "centroVotacion": null,
+        "numeroJunta": null,
+        "fechaVencimientoCedula": "2030-06-14",
+        "inscritoEnCantonDesde": "2015-01-10",
+        "inscritoEnDistritoDesde": "2018-09-05"
+      }
+    },
+    {
+      "cedula": "101010111",
+      "nombreCompleto": "Luis Andrés Rodríguez Mora",
+      "conocidoComo": "Luisito",
+      "padres": {
+        "padreOMadre1": {
+          "nombreCompleto": "Carmen Mora Vargas",
+          "identificacion": "201010111"
+        },
+        "padreOMadre2": {
+          "nombreCompleto": "Andrés Rodríguez Solano",
+          "identificacion": "301010111"
+        }
+      },
+      "fechaNacimiento": "1990-09-27",
+      "nacionalidad": "Costarricense",
+      "edad": 35,
+      "marginal": false,
+      "lugarNacimiento": {
+        "provincia": "Heredia",
+        "canton": "Heredia",
+        "distrito": "Mercedes"
+      },
+      "empadronado": true,
+      "fallecido": false,
+      "hijosRegistrados": [
+        {
+          "cedula": "131010111",
+          "nombreCompleto": "Valentina Rodríguez Pérez"
+        }
+      ],
+      "matrimoniosRegistrados": [
+        {
+          "cedula": "231010111",
+          "nombreCompleto": "María José Pérez Castro"
+        }
+      ],
+      "lugarVotacion": {
+        "provincia": "Heredia",
+        "canton": "Heredia",
+        "distrito": "Mercedes",
+        "distritoElectoral": "Mercedes Centro",
+        "numeroElectoral": null,
+        "centroVotacion": null,
+        "numeroJunta": null,
+        "fechaVencimientoCedula": "2031-03-08",
+        "inscritoEnCantonDesde": "2009-03-01",
+        "inscritoEnDistritoDesde": "2013-10-20"
+      }
+    },
+    {
+      "cedula": "101010112",
+      "nombreCompleto": "Andrea Mora Rodríguez",
+      "conocidoComo": "Andre",
+      "padres": {
+        "padreOMadre1": {
+          "nombreCompleto": "Rosa Rodríguez Vargas",
+          "identificacion": "201010112"
+        },
+        "padreOMadre2": {
+          "nombreCompleto": "Mario Mora Solano",
+          "identificacion": "301010112"
+        }
+      },
+      "fechaNacimiento": "1993-11-01",
+      "nacionalidad": "Costarricense",
+      "edad": 33,
+      "marginal": false,
+      "lugarNacimiento": {
+        "provincia": "Alajuela",
+        "canton": "San Ramón",
+        "distrito": "Central"
+      },
+      "empadronado": true,
+      "fallecido": false,
+      "hijosRegistrados": [],
+      "matrimoniosRegistrados": [],
+      "lugarVotacion": {
+        "provincia": "Alajuela",
+        "canton": "San Ramón",
+        "distrito": "Central",
+        "distritoElectoral": "Central Este",
+        "numeroElectoral": null,
+        "centroVotacion": null,
+        "numeroJunta": null,
+        "fechaVencimientoCedula": "2033-04-11",
+        "inscritoEnCantonDesde": "2011-06-06",
+        "inscritoEnDistritoDesde": "2016-08-01"
+      }
+    },
+    {
+      "cedula": "101010113",
+      "nombreCompleto": "Carlos Mora Pérez",
+      "conocidoComo": "Charlie",
+      "padres": {
+        "padreOMadre1": {
+          "nombreCompleto": "Lucía Pérez Castro",
+          "identificacion": "201010113"
+        },
+        "padreOMadre2": {
+          "nombreCompleto": "Mario Mora Chaves",
+          "identificacion": "301010113"
+        }
+      },
+      "fechaNacimiento": "2001-01-29",
+      "nacionalidad": "Costarricense",
+      "edad": 25,
+      "marginal": false,
+      "lugarNacimiento": {
+        "provincia": "Puntarenas",
+        "canton": "Puntarenas",
+        "distrito": "Barranca"
+      },
+      "empadronado": true,
+      "fallecido": false,
+      "hijosRegistrados": [],
+      "matrimoniosRegistrados": [],
+      "lugarVotacion": {
+        "provincia": "Puntarenas",
+        "canton": "Puntarenas",
+        "distrito": "Barranca",
+        "distritoElectoral": "Barranca Oeste",
+        "numeroElectoral": null,
+        "centroVotacion": null,
+        "numeroJunta": null,
+        "fechaVencimientoCedula": "2034-07-01",
+        "inscritoEnCantonDesde": "2019-04-01",
+        "inscritoEnDistritoDesde": "2021-01-20"
+      }
+    },
+    {
+      "cedula": "E-88112233",
+      "nombreCompleto": "Juan Pérez Rodríguez",
+      "conocidoComo": null,
+      "padres": {
+        "padreOMadre1": {
+          "nombreCompleto": "Elena Rodríguez Morales",
+          "identificacion": null
+        },
+        "padreOMadre2": {
+          "nombreCompleto": "Pedro Pérez Gómez",
+          "identificacion": null
+        }
+      },
+      "fechaNacimiento": "1989-03-15",
+      "nacionalidad": "Panameña",
+      "edad": 37,
+      "marginal": false,
+      "lugarNacimiento": {
+        "pais": "Panamá",
+        "provincia": null,
+        "canton": null,
+        "distrito": "David"
+      },
+      "empadronado": false,
+      "fallecido": false,
+      "hijosRegistrados": [],
+      "matrimoniosRegistrados": [],
+      "condicionMigratoria": {
+        "tipo": "Residencia temporal",
+        "numeroDIMEX": "188900331",
+        "vence": "2028-05-10"
+      },
+      "lugarVotacion": null
+    },
+    {
+      "cedula": "E-88112234",
+      "nombreCompleto": "María Pérez Rodríguez",
+      "conocidoComo": "Mary",
+      "padres": {
+        "padreOMadre1": {
+          "nombreCompleto": "Gloria Rodríguez Pérez",
+          "identificacion": null
+        },
+        "padreOMadre2": {
+          "nombreCompleto": "Antonio Pérez Ramírez",
+          "identificacion": null
+        }
+      },
+      "fechaNacimiento": "1992-07-20",
+      "nacionalidad": "Nicaragüense",
+      "edad": 34,
+      "marginal": false,
+      "lugarNacimiento": {
+        "pais": "Nicaragua",
+        "provincia": null,
+        "canton": null,
+        "distrito": "León"
+      },
+      "empadronado": false,
+      "fallecido": false,
+      "hijosRegistrados": [
+        {
+          "cedula": "141010334",
+          "nombreCompleto": "Daniel Pérez Castro"
+        }
+      ],
+      "matrimoniosRegistrados": [],
+      "condicionMigratoria": {
+        "tipo": "Residencia permanente",
+        "numeroDIMEX": "177700221",
+        "vence": "2031-02-18"
+      },
+      "lugarVotacion": null
+    },
+    {
+      "cedula": "E-88112235",
+      "nombreCompleto": "Luis Rodríguez Pérez",
+      "conocidoComo": null,
+      "padres": {
+        "padreOMadre1": {
+          "nombreCompleto": "Sandra Pérez López",
+          "identificacion": null
+        },
+        "padreOMadre2": {
+          "nombreCompleto": "Ricardo Rodríguez Mora",
+          "identificacion": null
+        }
+      },
+      "fechaNacimiento": "1986-12-03",
+      "nacionalidad": "Colombiana",
+      "edad": 40,
+      "marginal": false,
+      "lugarNacimiento": {
+        "pais": "Colombia",
+        "provincia": null,
+        "canton": null,
+        "distrito": "Cali"
+      },
+      "empadronado": false,
+      "fallecido": false,
+      "hijosRegistrados": [],
+      "matrimoniosRegistrados": [
+        {
+          "cedula": "241010335",
+          "nombreCompleto": "Andrea Castro Ramírez"
+        }
+      ],
+      "condicionMigratoria": {
+        "tipo": "Residencia temporal",
+        "numeroDIMEX": "166781221",
+        "vence": "2027-11-11"
+      },
+      "lugarVotacion": null
+    },
+    {
+      "cedula": "E-88112236",
+      "nombreCompleto": "Andrea Rodríguez Mora",
+      "conocidoComo": "Andy",
+      "padres": {
+        "padreOMadre1": {
+          "nombreCompleto": "Paola Mora Jiménez",
+          "identificacion": null
+        },
+        "padreOMadre2": {
+          "nombreCompleto": "Fernando Rodríguez Castro",
+          "identificacion": null
+        }
+      },
+      "fechaNacimiento": "1995-10-14",
+      "nacionalidad": "Mexicana",
+      "edad": 31,
+      "marginal": false,
+      "lugarNacimiento": {
+        "pais": "México",
+        "provincia": null,
+        "canton": null,
+        "distrito": "Guadalajara"
+      },
+      "empadronado": false,
+      "fallecido": false,
+      "hijosRegistrados": [],
+      "matrimoniosRegistrados": [],
+      "condicionMigratoria": {
+        "tipo": "Estudiante",
+        "numeroDIMEX": "199221145",
+        "vence": "2027-01-15"
+      },
+      "lugarVotacion": null
+    },
+    {
+      "cedula": "E-88112237",
+      "nombreCompleto": "Gabriela Rodríguez Pérez",
+      "conocidoComo": "Gabi",
+      "padres": {
+        "padreOMadre1": {
+          "nombreCompleto": "Luisa Pérez Gómez",
+          "identificacion": null
+        },
+        "padreOMadre2": {
+          "nombreCompleto": "Mario Rodríguez León",
+          "identificacion": null
+        }
+      },
+      "fechaNacimiento": "1990-08-08",
+      "nacionalidad": "Guatemalteca",
+      "edad": 36,
+      "marginal": false,
+      "lugarNacimiento": {
+        "pais": "Guatemala",
+        "provincia": null,
+        "canton": null,
+        "distrito": "Ciudad de Guatemala"
+      },
+      "empadronado": false,
+      "fallecido": false,
+      "hijosRegistrados": [],
+      "matrimoniosRegistrados": [],
+      "condicionMigratoria": {
+        "tipo": "Residencia permanente",
+        "numeroDIMEX": "144552211",
+        "vence": "2032-04-20"
+      },
+      "lugarVotacion": null
+    }
   ]
 }

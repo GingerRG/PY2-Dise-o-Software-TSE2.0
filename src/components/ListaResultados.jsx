@@ -1,17 +1,6 @@
 import './ListaResultados.css';
 
-const MOCK_RESULTADOS = [
-    { cedula: '101110111', nombre: 'Juan Pérez Rodríguez' },
-    { cedula: '102220222', nombre: 'María Rodríguez López' },
-    { cedula: '103330333', nombre: 'Carlos González Mora' },
-    { cedula: '104440444', nombre: 'Ana Jiménez Vargas' },
-    { cedula: '105550555', nombre: 'Luis Fernández Soto' },
-    { cedula: '106660666', nombre: 'Sofía Ramírez Castro' },
-    { cedula: '107770777', nombre: 'Pedro Méndez Arias' },
-    { cedula: '108880888', nombre: 'Laura Vega Solano' },
-]
-
-function ListaResultados({ resultados = MOCK_RESULTADOS, onSelect }) {
+function ListaResultados({ resultados = [], onSelect }) {
 
     return (
         <div className="lista-resultados-wrapper">
@@ -44,9 +33,11 @@ function ListaResultados({ resultados = MOCK_RESULTADOS, onSelect }) {
                     ))
                 )}
             </div>
+
             <div className="lista-resultados-footer">
                 <p className="disclaimer">TRIBUNAL SUPREMO DE ELECCIONES - DERECHOS RESERVADOS</p>
             </div>
+
         </div>
     );
 }

@@ -63,21 +63,33 @@ export const buscarDefuncionPorCedula = (cedula) => {
 // BÚSQUEDA POR NOMBRE — Persona nacional
 // ─────────────────────────────────────────
 export const buscarPorNombre = (nombre, apellido1, apellido2 = '') => {
-    const terminoNombre    = normalizar(nombre.trim());
+    const terminosNombre   = normalizar(nombre.trim()).split(/\s+/).filter(Boolean);
     const terminoApellido1 = normalizar(apellido1.trim());
     const terminoApellido2 = normalizar(apellido2.trim());
 
-    if (!terminoNombre || !terminoApellido1) return [];
+    // Requiere al menos nombre y uno de los dos apellidos
+    if (terminosNombre.length === 0) return [];
+    if (!terminoApellido1 && !terminoApellido2) return [];
 
-    const terminos = [terminoNombre, terminoApellido1];
-    if (terminoApellido2) terminos.push(terminoApellido2);
+    // Apellidos ingresados (solo los que tienen valor)
+    const apellidosIngresados = [terminoApellido1, terminoApellido2].filter(Boolean);
 
     return personas.personas.filter(persona => {
         const nombreNormalizado = normalizar(persona.nombreCompleto);
-        return terminos.every(termino => {
+
+        // Todos los términos del nombre deben aparecer como palabras completas
+        const nombreOk = terminosNombre.every(termino => {
             const regex = new RegExp(`(^|\\s)${termino}(\\s|$)`);
             return regex.test(nombreNormalizado);
         });
+
+        // Todos los apellidos ingresados deben aparecer como palabras completas
+        const apellidosOk = apellidosIngresados.every(termino => {
+            const regex = new RegExp(`(^|\\s)${termino}(\\s|$)`);
+            return regex.test(nombreNormalizado);
+        });
+
+        return nombreOk && apellidosOk;
     });
 };
 
