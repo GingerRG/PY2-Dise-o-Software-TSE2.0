@@ -2,71 +2,34 @@ import { Link } from 'react-router-dom'
 import { useEffect, useRef, useState } from 'react'
 import './Home.css'
 import logoTSE from '../assets/TSE_LOGO.png'
-import arcoTSE from '../assets/arco-tse.png'
 import mapaCR from '../assets/mapa-cr.png'
 
 function Home() {
   const serviciosRef = useRef(null)
   const [serviciosVisibles, setServiciosVisibles] = useState(false)
-  const [menuAccesibilidad, setMenuAccesibilidad] = useState(false)
-  const [nivelTexto, setNivelTexto] = useState(0)
 
-function aumentarTexto() {
-  setNivelTexto((nivelActual) => Math.min(nivelActual + 1, 2))
-}
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setServiciosVisibles(true)
+        }
+      },
+      {
+        threshold: 0.35,
+        rootMargin: '0px 0px -120px 0px',
+      }
+    )
 
-function disminuirTexto() {
-  setNivelTexto((nivelActual) => Math.max(nivelActual - 1, 0))
-}
-
-
-  function leerPagina() {
-  const contenido = document.querySelector('.home-quick-actions')
-
-  if (!contenido) return
-
-  const texto = contenido.innerText
-    .replace(/\s+/g, ' ')
-    .trim()
-
-  if (!texto) return
-
-  window.speechSynthesis.cancel()
-
-  const lectura = new SpeechSynthesisUtterance(texto)
-  lectura.lang = 'es-CR'
-  lectura.rate = 0.95
-  lectura.pitch = 1
-  lectura.volume = 1
-
-  window.speechSynthesis.speak(lectura)
-}
-
-function detenerLectura() {
-  window.speechSynthesis.cancel()
-}
-
-useEffect(() => {
-  const observer = new IntersectionObserver(
-  ([entry]) => {
-    if (entry.isIntersecting) {
-      setServiciosVisibles(true)
+    if (serviciosRef.current) {
+      observer.observe(serviciosRef.current)
     }
-  },
-  {
-    threshold: 0.35,
-    rootMargin: '0px 0px -120px 0px',
-  }
-)
 
-  if (serviciosRef.current) {
-    observer.observe(serviciosRef.current)
-  }
+    return () => observer.disconnect()
+  }, [])
 
-  return () => observer.disconnect()
-}, [])
   return (
-    <main className={`home home-text-${nivelTexto}`}>
+    <main className="home">
       <header className="home-header">
         <div className="home-header__logo">
           <img src={logoTSE} alt="Tribunal Supremo de Elecciones" />
@@ -81,8 +44,6 @@ useEffect(() => {
       </header>
 
       <section className="home-hero">
-        <img src={arcoTSE} alt="" className="home-hero-arco" />
-
         <div className="home-hero-content">
           <div className="home-hero-text">
             <p className="home-badge">Tribunal Supremo de Elecciones</p>
@@ -113,7 +74,9 @@ useEffect(() => {
 
       <section
         ref={serviciosRef}
-        className={`home-quick-actions ${serviciosVisibles ? 'home-quick-actions--visible' : ''}`}
+        className={`home-quick-actions ${
+          serviciosVisibles ? 'home-quick-actions--visible' : ''
+        }`}
         id="servicios"
       >
         <div className="quick-actions-container">
@@ -131,7 +94,11 @@ useEffect(() => {
               </p>
             </Link>
 
-            <Link to="/certificaciones-digitales" className="quick-card" style={{ '--delay': '120ms' }}>
+            <Link
+              to="/certificaciones-digitales"
+              className="quick-card"
+              style={{ '--delay': '120ms' }}
+            >
               <span className="quick-icon">02</span>
               <h3>Certificaciones digitales</h3>
               <p>
@@ -159,55 +126,56 @@ useEffect(() => {
       </section>
 
       <section className="home-election-section" id="elecciones">
-  <div className="election-container">
-    <div className="election-text">
-      <p className="section-label">Procesos electorales</p>
+        <div className="election-container">
+          <div className="election-text">
+            <p className="section-label">Procesos electorales</p>
 
-      <h2>Información electoral en un solo lugar</h2>
+            <h2>Información electoral en un solo lugar</h2>
 
-      <p>
-        Acceda de forma clara a la información relacionada con el padrón electoral,
-        partidos políticos, calendario electoral y participación ciudadana.
-      </p>
+            <p>
+              Acceda de forma clara a la información relacionada con el padrón
+              electoral, partidos políticos, calendario electoral y participación
+              ciudadana.
+            </p>
 
-      <div className="election-main-actions">
-        <a href="#" className="election-main-button">
-          Ver información electoral
-        </a>
+            <div className="election-main-actions">
+              <a href="#" className="election-main-button">
+                Ver información electoral
+              </a>
 
-        <a href="#transparencia" className="election-secondary-button">
-          Participación ciudadana
-        </a>
-      </div>
-    </div>
+              <a href="#transparencia" className="election-secondary-button">
+                Participación ciudadana
+              </a>
+            </div>
+          </div>
 
-    <div className="election-actions">
-      <Link to="/padron-electoral" className="election-card">
-        <div className="election-card-number">01</div>
-        <div>
-          <h3>Padrón electoral</h3>
-          <p>Consulte su lugar de votación y datos electorales.</p>
+          <div className="election-actions">
+            <Link to="/padron-electoral" className="election-card">
+              <div className="election-card-number">01</div>
+              <div>
+                <h3>Padrón electoral</h3>
+                <p>Consulte su lugar de votación y datos electorales.</p>
+              </div>
+            </Link>
+
+            <article className="election-card">
+              <div className="election-card-number">02</div>
+              <div>
+                <h3>Partidos políticos</h3>
+                <p>Información sobre agrupaciones políticas y normativa electoral.</p>
+              </div>
+            </article>
+
+            <Link to="/calendario-electoral" className="election-card">
+              <div className="election-card-number">03</div>
+              <div>
+                <h3>Calendario electoral</h3>
+                <p>Fechas importantes de los procesos electorales.</p>
+              </div>
+            </Link>
+          </div>
         </div>
-      </Link>
-
-      <Link to="/calendario-electoral" className="election-card">
-        <div className="election-card-number">03</div>
-        <div>
-          <h3>Calendario electoral</h3>
-          <p>Fechas importantes de los procesos electorales.</p>
-        </div>
-      </Link>
-
-      <article className="election-card">
-        <div className="election-card-number">03</div>
-        <div>
-          <h3>Calendario electoral</h3>
-          <p>Fechas importantes de los procesos electorales.</p>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
+      </section>
 
       <section className="home-participation" id="transparencia">
         <div className="participation-container">
@@ -253,50 +221,6 @@ useEffect(() => {
       <footer className="home-footer">
         <p>Tribunal Supremo de Elecciones - Rediseño académico</p>
       </footer>
-      <div className={`accessibility-widget ${menuAccesibilidad ? 'accessibility-widget--open' : ''}`}>
-        <div className="accessibility-panel">
-          <p>Opciones de accesibilidad</p>
-
-          <Link to="/accesibilidad">Ver accesibilidad</Link>
-
-          <button type="button" onClick={leerPagina}>
-            Leer página
-          </button>
-
-          <button type="button" onClick={detenerLectura}>
-            Detener lectura
-          </button>
-
-          <div className="text-size-control">
-            <span>Tamaño del texto</span>
-
-            <div className="text-size-buttons">
-              <button type="button" onClick={disminuirTexto}>
-                −
-              </button>
-
-              <strong>{nivelTexto === 0 ? 'Normal' : nivelTexto === 1 ? 'Grande' : 'Muy grande'}</strong>
-
-              <button type="button" onClick={aumentarTexto}>
-                +
-              </button>
-            </div>
-          </div>
-
-          <button type="button">Alto contraste</button>
-        </div>
-
-        <button
-          type="button"
-          className="accessibility-button"
-          onClick={() => setMenuAccesibilidad(!menuAccesibilidad)}
-          aria-expanded={menuAccesibilidad}
-        >
-          <span>Aa</span>
-          Accesibilidad
-      </button>
-</div>
-
     </main>
   )
 }
