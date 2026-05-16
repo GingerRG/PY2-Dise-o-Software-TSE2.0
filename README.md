@@ -4,6 +4,7 @@
 
 ```bash
 npm install
+npm install react-router-dom
 ```
 
 ## Ejecutar el proyecto

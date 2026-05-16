@@ -1,0 +1,147 @@
+.access-page {
+  width: 100vw;
+  min-height: 100vh;
+  margin-left: calc(50% - 50vw);
+  background:
+    linear-gradient(rgba(3, 18, 50, 0.78), rgba(3, 18, 50, 0.78)),
+    url("../assets/arco-tse.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: min(1550px, 135vw);
+  background-attachment: fixed;
+  color: #ffffff;
+}
+
+.access-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 72px;
+  padding: 0 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(3, 22, 62, 0.96);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
+}
+
+.access-header__logo img {
+  height: 68px;
+  width: auto;
+  display: block;
+}
+
+.access-header__nav {
+  display: flex;
+  gap: 22px;
+}
+
+.access-header__nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Segoe UI", "Roboto", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  border-radius: 999px;
+}
+
+.access-header__nav a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.access-hero {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 110px 64px 70px;
+}
+
+.access-label {
+  display: inline-flex;
+  margin: 0 0 18px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #dbeaff;
+  font-weight: 700;
+}
+
+.access-hero h1 {
+  max-width: 760px;
+  margin: 0;
+  font-size: 62px;
+  line-height: 1.04;
+  letter-spacing: -2px;
+}
+
+.access-hero p {
+  max-width: 680px;
+  margin: 24px 0 0;
+  color: #dbeaff;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.access-main-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 34px;
+  min-height: 48px;
+  padding: 0 24px;
+  border-radius: 14px;
+  background: #1d64ff;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 800;
+  box-shadow: 0 18px 42px rgba(29, 100, 255, 0.34);
+}
+
+.access-options {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 20px 64px 100px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.access-card {
+  min-height: 250px;
+  padding: 30px;
+  border-radius: 26px;
+  background:
+    linear-gradient(180deg, rgba(248, 251, 255, 0.96) 0%, rgba(231, 237, 246, 0.94) 100%);
+  color: #0d1b35;
+  border: 1px solid rgba(216, 226, 240, 0.95);
+  box-shadow:
+    0 18px 45px rgba(2, 12, 34, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.75);
+}
+
+.access-card span {
+  display: inline-flex;
+  width: 52px;
+  height: 52px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  border-radius: 16px;
+  background: rgba(29, 100, 255, 0.1);
+  color: #1d64ff;
+  font-weight: 800;
+}
+
+.access-card h2 {
+  margin: 0 0 12px;
+  font-size: 22px;
+  color: #071733;
+}
+
+.access-card p {
+  margin: 0;
+  color: #52627a;
+  line-height: 1.55;
+  font-size: 15px;
+}
