@@ -55,12 +55,12 @@ function NombreLayout({ tipo }) {
             </div>
 
             <p className="nombre-hint">
-              Ingrese el nombre y los apellidos de la persona.
+              Ingrese el nombre completo y los apellidos completos de la persona.
             </p>
 
             <div className="nombre-fields-row">
               <div className="nombre-field">
-                <label className="nombre-field-label">Nombre</label>
+                <label className="nombre-field-label">Nombre Completo</label>
                 <input
                   className="nombre-input"
                   placeholder="Nombre"
@@ -70,7 +70,7 @@ function NombreLayout({ tipo }) {
                 />
               </div>
               <div className="nombre-field">
-                <label className="nombre-field-label">Primer apellido</label>
+                <label className="nombre-field-label">Primer apellido Completo</label>
                 <input
                   className="nombre-input"
                   placeholder="Primer apellido"
@@ -80,7 +80,7 @@ function NombreLayout({ tipo }) {
                 />
               </div>
               <div className="nombre-field">
-                <label className="nombre-field-label">Segundo apellido</label>
+                <label className="nombre-field-label">Segundo apellido Completo</label>
                 <input
                   className="nombre-input"
                   placeholder="Segundo apellido"
