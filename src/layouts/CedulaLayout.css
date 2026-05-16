@@ -133,6 +133,7 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s;
+  margin-bottom: 3rem;
 }
 
 .cedula-btn-primario:hover:not(:disabled) {
@@ -149,5 +150,12 @@
   color: rgb(255, 255, 255);
   font-size: 1rem;
   margin: 4rem 0 1rem 0;
+  text-align: center;
+}
+
+.cedula-error {
+  color: #ff6666;
+  font-size: 0.82rem;
+  margin: -0.5rem 0 0.75rem 0;
   text-align: center;
 }
