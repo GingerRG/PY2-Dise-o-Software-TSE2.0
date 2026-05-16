@@ -9,6 +9,42 @@ function Home() {
   const serviciosRef = useRef(null)
   const [serviciosVisibles, setServiciosVisibles] = useState(false)
   const [menuAccesibilidad, setMenuAccesibilidad] = useState(false)
+  const [nivelTexto, setNivelTexto] = useState(0)
+
+function aumentarTexto() {
+  setNivelTexto((nivelActual) => Math.min(nivelActual + 1, 2))
+}
+
+function disminuirTexto() {
+  setNivelTexto((nivelActual) => Math.max(nivelActual - 1, 0))
+}
+
+
+  function leerPagina() {
+  const contenido = document.querySelector('.home-quick-actions')
+
+  if (!contenido) return
+
+  const texto = contenido.innerText
+    .replace(/\s+/g, ' ')
+    .trim()
+
+  if (!texto) return
+
+  window.speechSynthesis.cancel()
+
+  const lectura = new SpeechSynthesisUtterance(texto)
+  lectura.lang = 'es-CR'
+  lectura.rate = 0.95
+  lectura.pitch = 1
+  lectura.volume = 1
+
+  window.speechSynthesis.speak(lectura)
+}
+
+function detenerLectura() {
+  window.speechSynthesis.cancel()
+}
 
 useEffect(() => {
   const observer = new IntersectionObserver(
@@ -30,7 +66,7 @@ useEffect(() => {
   return () => observer.disconnect()
 }, [])
   return (
-    <main className="home">
+    <main className={`home home-text-${nivelTexto}`}>
       <header className="home-header">
         <div className="home-header__logo">
           <img src={logoTSE} alt="Tribunal Supremo de Elecciones" />
@@ -95,13 +131,13 @@ useEffect(() => {
               </p>
             </Link>
 
-            <article className="quick-card" style={{ '--delay': '120ms' }}>
+            <Link to="/certificaciones-digitales" className="quick-card" style={{ '--delay': '120ms' }}>
               <span className="quick-icon">02</span>
               <h3>Certificaciones digitales</h3>
               <p>
                 Solicite certificaciones civiles de forma rápida y sencilla.
               </p>
-            </article>
+            </Link>
 
             <article className="quick-card" style={{ '--delay': '240ms' }}>
               <span className="quick-icon">03</span>
@@ -146,21 +182,21 @@ useEffect(() => {
     </div>
 
     <div className="election-actions">
-      <article className="election-card">
+      <Link to="/padron-electoral" className="election-card">
         <div className="election-card-number">01</div>
         <div>
           <h3>Padrón electoral</h3>
           <p>Consulte su lugar de votación y datos electorales.</p>
         </div>
-      </article>
+      </Link>
 
-      <article className="election-card">
-        <div className="election-card-number">02</div>
+      <Link to="/calendario-electoral" className="election-card">
+        <div className="election-card-number">03</div>
         <div>
-          <h3>Partidos políticos</h3>
-          <p>Información sobre agrupaciones políticas y normativa electoral.</p>
+          <h3>Calendario electoral</h3>
+          <p>Fechas importantes de los procesos electorales.</p>
         </div>
-      </article>
+      </Link>
 
       <article className="election-card">
         <div className="election-card-number">03</div>
@@ -221,9 +257,33 @@ useEffect(() => {
         <div className="accessibility-panel">
           <p>Opciones de accesibilidad</p>
 
-          <button type="button">Aumentar texto</button>
+          <Link to="/accesibilidad">Ver accesibilidad</Link>
+
+          <button type="button" onClick={leerPagina}>
+            Leer página
+          </button>
+
+          <button type="button" onClick={detenerLectura}>
+            Detener lectura
+          </button>
+
+          <div className="text-size-control">
+            <span>Tamaño del texto</span>
+
+            <div className="text-size-buttons">
+              <button type="button" onClick={disminuirTexto}>
+                −
+              </button>
+
+              <strong>{nivelTexto === 0 ? 'Normal' : nivelTexto === 1 ? 'Grande' : 'Muy grande'}</strong>
+
+              <button type="button" onClick={aumentarTexto}>
+                +
+              </button>
+            </div>
+          </div>
+
           <button type="button">Alto contraste</button>
-          <button type="button">Lectura fácil</button>
         </div>
 
         <button
